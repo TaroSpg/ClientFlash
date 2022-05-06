@@ -87,11 +87,11 @@ if (newcolor.levels[0]!=col.levels[0]||newcolor.levels[1]!=col.levels[1]||newcol
   background(0,0,255);
   noStroke();
   ambientLight(0, 0, 0);
-  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 0, 0, 500);
-  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), accelerationX, accelerationY, 500);
+  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 0, 0, 10000);
+  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), accelerationX, accelerationY, 10000);
   specularMaterial(250);
   shininess(5);
-  sphere(500);
+  sphere(10000);
   
   //textSize(32);
   //text(gridId, 10, 30);

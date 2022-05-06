@@ -30,7 +30,7 @@ var gridId=[1,1];
 let amt;
 
 let col, prevcolor, newcolor;
-let prevaccposx=0, prevaccposz=0;
+let prevaccposy=0, prevaccposz=0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);

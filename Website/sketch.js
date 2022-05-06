@@ -89,8 +89,8 @@ if (newcolor.levels[0]!=col.levels[0]||newcolor.levels[1]!=col.levels[1]||newcol
   noStroke();
   ambientLight(0, 0, 0);
   pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 0, 0, 800);
-  if (prevaccposx-0.5>accelerationX || prevaccposx+0.5<accelerationX || prevaccposz-0.5>accelerationZ || prevaccposz+0.5<accelerationZ ){
-      prevaccposx=accelerationX;
+  if (prevaccposy-0.5>accelerationY || prevaccposy+0.5<accelerationY || prevaccposz-0.5>accelerationZ || prevaccposz+0.5<accelerationZ ){
+      prevaccposy=accelerationY;
       prevaccposz=accelerationZ;
   }
   pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), prevaccposx*200, prevaccposz*200, 800);

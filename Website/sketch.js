@@ -30,6 +30,7 @@ var gridId=[1,2];
 let amt;
 
 let col, prevcolor, newcolor;
+let prevaccposx=0, prevaccposz=0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
@@ -88,7 +89,11 @@ if (newcolor.levels[0]!=col.levels[0]||newcolor.levels[1]!=col.levels[1]||newcol
   noStroke();
   ambientLight(0, 0, 0);
   pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 0, 0, 800);
-  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), accelerationX*200, accelerationZ*200, 800);
+  if (prevaccposx-0.3>accelerationX || prevaccposx+0.3<accelerationX || prevaccposz-0.3>accelerationZ || prevaccposz+0.3<accelerationZ ){
+      prevaccposx=accelerationX;
+      prevaccposz=accelerationZ;
+  }
+  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), prevaccposx*200, prevaccposz*200, 800);
   specularMaterial(250);
   shininess(5);
   sphere(700);

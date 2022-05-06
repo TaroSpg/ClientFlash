@@ -88,7 +88,7 @@ if (newcolor.levels[0]!=col.levels[0]||newcolor.levels[1]!=col.levels[1]||newcol
   noStroke();
   ambientLight(0, 0, 0);
   pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 0, 0, 800);
-  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), accelerationX*10, accelerationY*10, 800);
+  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), accelerationX*200, accelerationZ*200, 800);
   specularMaterial(250);
   shininess(5);
   sphere(700);

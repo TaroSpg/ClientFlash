@@ -98,7 +98,8 @@ if (newcolor.levels[0]!=col.levels[0]||newcolor.levels[1]!=col.levels[1]||newcol
       //accposz=accelerationZ;
       checkaccel=0;
   }
-  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), accposy*80, accposx*80, 520);
+  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), accposy*10, accposx*10, 510);
+  //pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 6*20, 0*20, 510);
   specularMaterial(250);
   shininess(5);
   sphere(500);

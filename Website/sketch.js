@@ -91,13 +91,15 @@ if (newcolor.levels[0]!=col.levels[0]||newcolor.levels[1]!=col.levels[1]||newcol
   background(0,0,255);
   noStroke();
   ambientLight(0, 0, 0);
-  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 0, 0, 520);
-  if (checkaccel>=200){
-      accposy=accelerationY;
-      accposx=accelerationX;
-      //accposz=accelerationZ;
-      checkaccel=0;
-  }
+  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 0, 0, 530);
+  // if (checkaccel>=50){
+  //     accposy=accelerationY;
+  //     accposx=accelerationX;
+  //     //accposz=accelerationZ;
+  //     checkaccel=0;
+  // }
+  accposy=(accelerationY+accposy)/2;
+  accposx=(accelerationX+accposx)/2;
   pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), Math.exp(accposx-3)*150, Math.exp(accposy-3)*150, 505);
   console.log('accposx', accposx);
   console.log('accposy', accposy);

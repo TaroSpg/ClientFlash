@@ -87,18 +87,18 @@ if (newcolor.levels[0]!=col.levels[0]||newcolor.levels[1]!=col.levels[1]||newcol
 
   //background(lerpColor(prevcolor, col, smoothstep(0.1,0.8,amt)));
   amt+=0.01;
-  checkaccel=checkaccel+1;
+  checkaccel+=1;
   background(0,0,255);
   noStroke();
   ambientLight(0, 0, 0);
-  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 0, 0, 510);
-  if (checkaccel>=25){
+  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 0, 0, 520);
+  if (checkaccel>=200){
       accposy=accelerationY;
       accposx=accelerationX;
       //accposz=accelerationZ;
       checkaccel=0;
   }
-  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), Math.exp(accposx-3)*100, Math.exp(accposy-3)*100, 505);
+  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), Math.exp(accposx-3)*150, Math.exp(accposy-3)*150, 505);
   console.log('accposx', accposx);
   console.log('accposy', accposy);
   specularMaterial(250);

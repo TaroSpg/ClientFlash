@@ -98,7 +98,7 @@ if (newcolor.levels[0]!=col.levels[0]||newcolor.levels[1]!=col.levels[1]||newcol
   //     //accposz=accelerationZ;
   //     checkaccel=0;
   // }
-  accposy=Math.sign(accelerationY)*(Math.abs(accelerationY)+Math.abs(accposy))/2;
+  accposy=Math.sign(accelerationY)*(Math.abs(accelerationY-9)+Math.abs(accposy))/2;
   accposx=Math.sign(accelerationX)*(Math.abs(accelerationX)+Math.abs(accposx))/2;
   pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), accposx*150, accposy*150, 505);
   console.log('accposx', accposx);

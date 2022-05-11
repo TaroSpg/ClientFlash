@@ -91,7 +91,7 @@ if (newcolor.levels[0]!=col.levels[0]||newcolor.levels[1]!=col.levels[1]||newcol
   background(0,0,255);
   noStroke();
   ambientLight(0, 0, 0);
-  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 0, 0, 540);
+  pointLight(lerpColor(prevcolor, col, smoothstep(0.1,0.7,amt)), 0, 0, 580);
   // if (checkaccel>=50){
   //     accposy=accelerationY;
   //     accposx=accelerationX;

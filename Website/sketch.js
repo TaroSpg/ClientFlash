@@ -98,7 +98,7 @@ if (newcolor.levels[0]!=col.levels[0]||newcolor.levels[1]!=col.levels[1]||newcol
   //     //accposz=accelerationZ;
   //     checkaccel=0;
   // }
-  accposy=Math.sign(accelerationY)*(Math.abs(accelerationY-9)+Math.abs(accposy))/2;
+  accposy=Math.sign(accelerationY)*(Math.abs(accelerationY+1.2)+Math.abs(accposy))/2;
   text('accposy ' + accposy, 25,25);
   text('accelrationY ' + accelerationY, 25, 50);
   accposx=Math.sign(accelerationX)*(Math.abs(accelerationX)+Math.abs(accposx))/2;
